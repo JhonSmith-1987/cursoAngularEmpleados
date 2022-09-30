@@ -4,7 +4,8 @@
 
         <div>
           {{i+1}}: {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}} {{empleado.salario}}
-          <a [routerLink]="['/actualizar_empleado', i]">Actualizar</a>
+          <a [routerLink]="['/actualizar_empleado', i]" [queryParams]="{accion:'actualizar'}">Actualizar</a>
+          <a [routerLink]="['/actualizar_empleado', i]" [queryParams]="{accion: 'eliminar'}">Eliminar</a>
         </div>
 
         <app-caracteristicas-empleado (caracteristicasEmpleados)="agregarCaracteristica($event)"></app-caracteristicas-empleado>
